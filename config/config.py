@@ -27,17 +27,17 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/itz-star-boi/ShizukaXMusic",
+    "https://github.com/code663/ShizukaXMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
-GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/WCGKING/BRANDEDXSHIZUKA")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/code663/BRANDEDXSHIZUKA")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/BRANDRD_BOT")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/BRANDED_WORLD")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ANGEL_K_WORLD")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/IND_PAWAN")
 
 
-AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "True")
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "false")
 AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "5400"))
 AUTO_SUGGESTION_TIME = int(getenv("AUTO_SUGGESTION_TIME", "5400"))
 AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", None)
@@ -80,7 +80,7 @@ clean = {}
 autoclean = []
 
 
-START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/5dbc36ec3ea5a6e04929b.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/64e3651d1fb88c0528cbc.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
