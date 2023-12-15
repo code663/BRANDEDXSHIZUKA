@@ -45,7 +45,7 @@
       },
       "OWNER_ID": {
         "description": "The user id(s) of user(s) whom you would like to add as a OWNER. Multiple values shall be seperated with a space.",
-        "value": "6258877205",
+        "value": "6329937391",
         "required": true
       },
       "STRING_SESSION": {
@@ -55,22 +55,22 @@
       },
       "SUPPORT_GROUP": {
         "description": "Your Support Group link ",
-        "value": "https://t.me/BRANDED_LINK",
+        "value": "https://t.me/IND_PAWAN",
         "required": false
       },
       "SUPPORT_CHANNEL": {
         "description": "Your Updates Channel link",
-        "value": "https://t.me/BRANDRD_21",
+        "value": "https://t.me/ANGEL_K_WORLD",
         "required": false
       },
       "PING_IMG_URL": {
         "description": "The pic which will be shown when you give the /ping cmd to the bot.",
-        "value": "",
+        "value": "https://telegra.ph/file/9384ac4477695fd1f7959.jpg",
         "required": false
       },
       "START_IMG_URL": {
         "description": "The pic which will be shown when you /start the bot in private.",
-        "value": "",
+        "value": "https://telegra.ph/file/64e3651d1fb88c0528cbc.jpg",
         "required": false
       },
       "HEROKU_API_KEY": {
@@ -90,7 +90,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "If you dont know this, Leave as it is",
-        "value": "https://github.com/WCGKING/BRANDEDXSHIZUKA",
+        "value": "https://telegra.ph/file/48505fe3f4170f5a3966e.mp4",
         "required": true
       },
       "UPSTREAM_BRANCH": {
