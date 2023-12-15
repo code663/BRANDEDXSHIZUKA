@@ -8,7 +8,7 @@ from ShizukaXMusic.utils.database import get_client, is_active_chat, is_autoend
 
 
 async def auto_leave():
-    if config.AUTO_LEAVING_ASSISTANT == str(True):
+    if config.AUTO_LEAVING_ASSISTANT == str(false):
         while not await asyncio.sleep(config.AUTO_LEAVE_ASSISTANT_TIME):
             from ShizukaXMusic.core.userbot import assistants
 
@@ -25,7 +25,7 @@ async def auto_leave():
                             chat_id = i.chat.id
                             if (
                                 chat_id != config.LOG_GROUP_ID
-                                and chat_id != -1001626004802
+                                and chat_id != --1001909684210
                             ):
                                 if not await is_active_chat(chat_id):
                                     try:
