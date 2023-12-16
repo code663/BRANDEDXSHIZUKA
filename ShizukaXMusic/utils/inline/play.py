@@ -294,8 +294,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
         bar = "ﮩ♡٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     elif 7 <= vip < 8:
         bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩ♡ﮩ٨ـ"
-
-elif 9 <= vip < 10:
+    elif 9 <= vip < 10:
         bar = "ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ"
     elif 11 <= vip < 12:
         bar = "ﮩ٨ـﮩ♡ﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
@@ -429,8 +428,7 @@ elif 9 <= vip < 10:
         bar = "ﮩ٨ـﮩ♡ﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     elif 76 <= vip < 77:
         bar = "ﮩ♡٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
-
-elif 77 <= vip < 78:
+    elif 77 <= vip < 78:
         bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩ♡ﮩ٨ـ"
     elif 78 <= vip < 79:
         bar = "ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ"
