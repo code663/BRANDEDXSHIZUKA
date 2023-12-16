@@ -84,7 +84,7 @@ async def start_comm(client, message: Message, _):
                     details = stats.get(vidid)
                     title = (details["title"][:35]).title()
                     if vidid == "telegram":
-                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/BRANDED_LINK) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
+                        msg += f"🔗[ᴛᴇʟᴇɢʀᴀᴍ ᴍᴇᴅɪᴀ](https://t.me/IND_PAWAN) ** ᴩʟᴀʏᴇᴅ {count} ᴛɪᴍᴇs**\n\n"
                     else:
                         msg += f"🔗 [{title}](https://www.youtube.com/watch?v={vidid}) ** played {count} times**\n\n"
                 msg = _["ustats_2"].format(tot, tota, limit) + msg
@@ -273,10 +273,10 @@ async def welcome(client, message: Message):
 @app.on_message(commandpro(["/alive", "Shizuka"]) & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://te.legra.ph/file/0d048443e85813227f253.jpg",
+        photo=f"https://telegra.ph/file/64e3651d1fb88c0528cbc.jpg",
         caption=f"""━━━━━━━━━━━━━━━━━━━━━━━━\n\n✪ ʜᴇʟʟᴏ, {MUSIC_BOT_NAME} ɪs ᴡᴏʀᴋɪɴɢ ᴀɴᴅ ғᴜɴᴄᴛɪᴏɴɪɴɢ ᴘʀᴏᴘᴇʀʟʏ\n\n💞 ɪғ ʏᴏᴜ ʜᴀᴠᴇ ᴀɴʏ ǫᴜᴇsᴛɪᴏɴs ᴛʜᴇɴ\nᴅᴍ ᴛᴏ ᴍʏ [ᴏᴡɴᴇʀ](https://t.me/BRANDRD_21) ᴍᴀᴋᴇ sᴜʀᴇ ᴛᴏ sᴛᴀʀ ᴏᴜʀ ᴘʀᴏᴊᴇᴄᴛ ...\n\n━━━━━━━━━━━━━━━━━━━━━━━━
 """,
         reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🌼 sʜɪᴢᴜᴋᴀ ᴄʜᴀᴛ 💮", url=f"https://t.me/BRANDED_LINK")]]
+            [[InlineKeyboardButton("🌼 sʜɪᴢᴜᴋᴀ ᴄʜᴀᴛ 💮", url=f"https://t.me/IND_PAWAN")]]
         ),
     )
