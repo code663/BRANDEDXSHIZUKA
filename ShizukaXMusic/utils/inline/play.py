@@ -132,8 +132,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         bar = "ﮩ♡٨ـﮩﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
     elif 61 <= vip < 62:
         bar = "ﮩ٨ـﮩﮩ٨ـﮩ٨ـﮩ♡ﮩ٨ـ"
-
-elif 62 <= vip < 63:
+    elif 62 <= vip < 63:
         bar = "ﮩ٨ـﮩﮩ٨ـ♡ﮩ٨ـﮩﮩ٨ـ"
     elif 63 <= vip < 64:
         bar = "ﮩ٨ـﮩ♡ﮩ٨ـﮩ٨ـﮩﮩ٨ـ"
