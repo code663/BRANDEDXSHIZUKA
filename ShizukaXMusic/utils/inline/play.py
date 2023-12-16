@@ -902,9 +902,9 @@ def slider_markup(
     
 
 
-            [
+            
 
-                [
+                
 
                     InlineKeyboardButton(
 
