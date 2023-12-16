@@ -910,7 +910,7 @@ def slider_markup(
 
                         text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
 
-                    )
+                    ),
 
                 ]    
 
