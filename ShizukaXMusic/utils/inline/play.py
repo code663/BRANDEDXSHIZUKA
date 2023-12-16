@@ -1,4 +1,4 @@
-♡━━━｡श्रीकृष्ण｡━━━♡
+
 from pyrogram.types import InlineKeyboardButton
 import config
 
