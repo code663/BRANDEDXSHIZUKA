@@ -906,17 +906,17 @@ def slider_markup(
 
                 
 
-                    InlineKeyboardButton(
+                    
 
-                        text="✯ ᴄʟᴏsᴇ ✯", callback_data="close"
+                        
 
-                    ),
+                    
 
-                ]    
 
-            ]
 
-        )
+          
+
+        
 
 ## Queue Markup
 
