@@ -2,10 +2,10 @@ import math
 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import GITHUB_REPO, SUPPORT_CHANNEL, SUPPORT_GROUP
-from VipX import app
+from ShizukaXMusic import app
 
 import config
-from VipX.utils.formatters import time_to_seconds
+from ShizukaXMusic.utils.formatters import time_to_seconds
 
 
 ## After Edits with Timer Bar
