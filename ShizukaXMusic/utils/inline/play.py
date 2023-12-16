@@ -862,10 +862,7 @@ def slider_markup(
                 text=_["P_B_2"],
 
                 callback_data=f"MusicStream {videoid}|{user_id}|v|{channel}|{fplay}",
-
-            ),
-
-        ],
-
-    ]
-       return buttons
+      ),
+   ],
+]
+return buttons
