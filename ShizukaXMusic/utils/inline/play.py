@@ -867,8 +867,5 @@ def slider_markup(
 
         ],
 
-        [
-
-            InlineKeyboardButton(
-
-                text="◁",
+    ]
+       return buttons
