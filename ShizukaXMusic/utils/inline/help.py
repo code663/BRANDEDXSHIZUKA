@@ -1,50 +1,84 @@
 from typing import Union
-
+import asyncio
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from ShizukaXMusic import app
-
-
 def help_pannel(_, START: Union[bool, int] = None):
-    first = [InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data=f"close")]
+    first = [
+        InlineKeyboardButton(
+            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
+        )
+    ]
     second = [
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
-            callback_data="help_back",
+            callback_data=f"settingsback_helper",
         ),
-        InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data=f"close"),
+        InlineKeyboardButton(
+            text=_["CLOSEMENU_BUTTON"], callback_data=f"close"
+        ),
+        InlineKeyboardButton(
+            text="★ ɱᴏʀε ★", callback_data="help_callback hb13"
+        ),
     ]
     mark = second if START else first
     upl = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text=_["H_B_2"],
-                    callback_data="help_callback hb2",
-                ),
-                InlineKeyboardButton(
-                    text=_["H_B_1"],
+                    text="🍁αԃɱιɳ🍁",
                     callback_data="help_callback hb1",
                 ),
-            ],
-            [
                 InlineKeyboardButton(
-                    text=_["H_B_3"],
+                    text="🔺αυƭɦ🔺",
+                    callback_data="help_callback hb2",
+                ),
+            
+                InlineKeyboardButton(
+                    text="♨️вℓσ¢к♨️",
                     callback_data="help_callback hb3",
                 ),
+            ],
+            [
                 InlineKeyboardButton(
-                    text=_["H_B_4"],
+                    text="📣ɠ¢αʂƭ📣",
                     callback_data="help_callback hb4",
+                ),
+                InlineKeyboardButton(
+                    text="🚫ɠɓαɳ🚫",
+                    callback_data="help_callback hb12",
+                ),
+                InlineKeyboardButton(
+                    text="🍷ℓყɾเ¢ʂ🍷",
+                    callback_data="help_callback hb5",
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text=_["H_B_7"],
-                    callback_data="help_callback hb7",
+                    text="🎙️քℓαყℓเʂƭ🎙️",
+                    callback_data="help_callback hb6",
                 ),
                 InlineKeyboardButton(
-                    text=_["H_B_6"],
-                    callback_data="help_callback hb5",
+                    text="🎸ѵσเ¢ε-¢ɦαƭ🎸",
+                    callback_data="help_callback hb10",
+                ),
+            ],
+            [
+           
+                InlineKeyboardButton(
+                    text="🕹️ρℓαყ🕹️",
+                    callback_data="help_callback hb8",
+                ),
+            
+            
+                InlineKeyboardButton(
+                    text="🍸ʂ𝖚∂σ🍸",
+                    callback_data="help_callback hb9",
+                ),
+            ],
+            [
+                InlineKeyboardButton(
+                    text="⚜️SƬΛᏒƬ⚜️",
+                    callback_data="help_callback hb11",
                 ),
             ],
             mark,
@@ -61,7 +95,13 @@ def help_back_markup(_):
                     text=_["BACK_BUTTON"],
                     callback_data=f"settings_back_helper",
                 ),
-                InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close"),
+                InlineKeyboardButton(
+                    text=_["CLOSE_BUTTON"], callback_data=f"close"
+                ),
+                InlineKeyboardButton(
+                    text="★ ɱᴏʀε ★", callback_data="help_callback hb13"
+                )
+
             ]
         ]
     )
@@ -72,8 +112,8 @@ def private_help_panel(_):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["S_B_1"],
-                url=f"https://t.me/{app.username}?start=help",
+                text="🎭 𝐇𝐄𝐋𝐏 🎭",
+                callback_data="settings_back_helper",
             ),
         ],
     ]
