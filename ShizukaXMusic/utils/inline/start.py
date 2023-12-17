@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import config
-from config import GROUP_USERNAME, CHANNEL_USERNAME
+
 
 
 def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
