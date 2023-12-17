@@ -3,7 +3,7 @@ from datetime import datetime
 from pyrogram import filters
 from pyrogram.types import Message
 
-from config import BANNED_USERS, MUSIC_BOT_NAME, PING_IMG_URL
+from config import BANNED_USERS,MERA_X_PYAR_BOT, PING_IMG_URL
 from strings import get_command
 from ShizukaXMusic import app
 from ShizukaXMusic.core.call import Shizuka
@@ -28,5 +28,5 @@ async def ping_com(client, message: Message, _):
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
-        _["ping_2"].format(resp, MUSIC_BOT_NAME, UP, RAM, CPU, DISK, pytgping)
+        _["ping_2"].format(resp,MERA_X_PYAR_BOT, UP, RAM, CPU, DISK, pytgping)
     )
