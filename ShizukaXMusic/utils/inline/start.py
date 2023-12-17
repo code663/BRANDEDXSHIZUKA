@@ -14,7 +14,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         [
             InlineKeyboardButton(
                 text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                url=f"https://t.me/MERA_X_PYAR_BOT?startgroup=true",
             )
         ],
         [
@@ -30,7 +30,7 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     return buttons
 
 #extra shit
-BOT_USERNAME = ("{BOT_USERNAME}")
+BOT_USERNAME = ("MERA_X_PYAR_BOT")
 
 def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     global GROUP_USERNAME
@@ -39,7 +39,7 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         [
             InlineKeyboardButton(
                 text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
-                url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                url=f"https://t.me/MERA_X_PYAR_BOT?startgroup=true",
             )
         
         ],
