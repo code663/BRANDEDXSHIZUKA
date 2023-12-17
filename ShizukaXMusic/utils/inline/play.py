@@ -1,4 +1,3 @@
-
 from pyrogram.types import InlineKeyboardButton
 import config
 
@@ -152,6 +151,7 @@ def stream_markup(_, videoid, chat_id):
     ]
     return buttons
 
+
 def telegram_markup(_, chat_id):
     buttons = [
         [
@@ -292,8 +292,7 @@ def panel_markup_1(_, videoid, chat_id):
             InlineKeyboardButton(
                 text="II", callback_data=f"ADMIN Pause|{chat_id}"
             ),
-
-InlineKeyboardButton(
+            InlineKeyboardButton(
                 text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
             ),
             InlineKeyboardButton(
