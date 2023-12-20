@@ -236,8 +236,7 @@ song_11 : "Uploading Started\n\nUploading speed could be slow. Please hold on.."
 # Tools - Queue
 queue_1 : "⚡𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭..."
 queue_2 : "𝐐𝐮𝐞𝐮𝐞𝐝 𝐋𝐢𝐬𝐭 𝐈𝐬 𝐄𝐦𝐩𝐭𝐲. 𝐍𝐨 𝐓𝐫𝐚𝐜𝐤𝐬 𝐅𝐨𝐮𝐧𝐝.."
-queue_3 : "<u>Queued Tracks:</u>  [Checkout More Queued Tracks From Here]({0})"
-queue_4 : "◈ ━━━━━ ⸙ ♡ ⸙ ━━━━━ ◈\n➻ 𝐇ᴇʏ {3}  \n\n➻ 𝐘ᴏᴜʀ 𝐒ong:- [{1}](https://t.me/ANGEL_K_WORLD) \n➻ 𝐖ɪʟʟ 𝐏ʟᴀʏ 𝐀ғᴛᴇʀ {0} 𝐒ᴏɴɢ. \n◈ ━━━━━ ⸙ ♡ ⸙ ━━━━━ ◈"
+queue_3 : "<u>Queued Tracks:</u>  [Checkout More Queued Tracks From Here]({0})
 queue_5 : "𝐎𝐧𝐥𝐲 𝐎𝐧𝐞 𝐓𝐫𝐚𝐜𝐤 𝐈𝐬 𝐈𝐧 𝐐𝐮𝐞𝐮𝐞, 𝐀𝐝𝐝 𝐒𝐨𝐦𝐞 𝐌𝐨𝐫𝐞 𝐓𝐫𝐚𝐜𝐤𝐬 𝐈𝐧 𝐐𝐮𝐞𝐮𝐞 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐖𝐡𝐨𝐥𝐞 𝐐𝐮𝐞𝐮𝐞."
 
 # All Streaming Lines
@@ -248,10 +247,7 @@ stream_4 : "➻ 𝐇ᴇʏ {3} ❤️ \n\n➻ 𝐘ᴏᴜʀ [𝐒ong]({1}) 𝐏ʟ�
 # Inline Buttons
 
 #General Buttons
-CLOSE_BUTTON  : "✯ ¢ℓσѕє ✯"
-CLOSEMENU_BUTTON  : "✯ ¢ℓσѕє ✯"
-BACK_BUTTON : "✯ вα¢к ✯"
-UNBAN_BUTTON : "✯ 𝐔𝐍𝐁𝐀𝐍 ✯"
+
 
 #Lyrics
 L_B_1 : "🌋 ᴄʜᴇᴄᴋᴏᴜᴛ ʟʏʀɪᴄs ɴᴏᴡ"
