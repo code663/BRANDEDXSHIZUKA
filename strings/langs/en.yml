@@ -234,10 +234,7 @@ song_10 : "Failed to upload on telegram from servers."
 song_11 : "Uploading Started\n\nUploading speed could be slow. Please hold on.."
 
 # Tools - Queue
-queue_1 : "⚡𝐏𝐥𝐞𝐚𝐬𝐞 𝐖𝐚𝐢𝐭..."
-queue_2 : "𝐐𝐮𝐞𝐮𝐞𝐝 𝐋𝐢𝐬𝐭 𝐈𝐬 𝐄𝐦𝐩𝐭𝐲. 𝐍𝐨 𝐓𝐫𝐚𝐜𝐤𝐬 𝐅𝐨𝐮𝐧𝐝.."
-queue_3 : "<u>Queued Tracks:</u>  [Checkout More Queued Tracks From Here]({0})
-queue_5 : "𝐎𝐧𝐥𝐲 𝐎𝐧𝐞 𝐓𝐫𝐚𝐜𝐤 𝐈𝐬 𝐈𝐧 𝐐𝐮𝐞𝐮𝐞, 𝐀𝐝𝐝 𝐒𝐨𝐦𝐞 𝐌𝐨𝐫𝐞 𝐓𝐫𝐚𝐜𝐤𝐬 𝐈𝐧 𝐐𝐮𝐞𝐮𝐞 𝐓𝐨 𝐂𝐡𝐞𝐜𝐤 𝐖𝐡𝐨𝐥𝐞 𝐐𝐮𝐞𝐮𝐞."
+
 
 # All Streaming Lines
 stream_1 : "➻ 𝐇ᴇʏ {3} ❤️ \n\n➻ 𝐘ᴏᴜʀ [𝐒ong]({1}) 𝐏ʟᴀʏɪɴɢ 𝐍ᴏᴡ."
