@@ -1,4 +1,5 @@
 import re
+import sys
 from os import getenv
 
 from dotenv import load_dotenv
@@ -6,118 +7,136 @@ from pyrogram import filters
 
 load_dotenv()
 
-# Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
+API_ID = int(getenv("API_ID", ""))
 API_HASH = getenv("API_HASH")
-# Get your token from @BotFather on Telegram.
+
 BOT_TOKEN = getenv("BOT_TOKEN")
-# Add Owner Username without @ 
-OWNER_USERNAME = getenv("OWNER_USERNAME", "ANOKHI_TG")
-# Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "LOVER_X_MUSIC_BOT")
-# Don't Add style font 
-BOT_NAME = getenv("BOT_NAME", "LOVER MUSIC")
-#get Your Assistant User name
-ASSUSERNAME = getenv("ASSUSERNAME", "LOVER_ASS")
-EVALOP = list(map(int, getenv("EVALOP", "6178528303").split()))
-# Get your mongo url from cloud.mongodb.com
-MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://sanasomani786:TJgADfpkI1XVUkKt@cluster0.ruhyad9.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp")
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 10000))
+MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-# Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", --1001909684210))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "90000"))
 
-# Get this value from  on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "6420317225"))
+SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION_LIMIT", "18000"))
 
-## Fill these variables if you're deploying on heroku.
-# Your heroku app name
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
+
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME")
+OWNER_ID = list(map(int, getenv("OWNER_ID", "").split()))
+HEROKU_API_KEY = getenv("HEROKU_API_KEY") 
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-# Get it from http://dashboard.heroku.com/account
-HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/code663/DAXXMUSIC",
+    "https://github.com/code663/BRANDEDXSHIZUKA",
 )
-UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "Master")
-GIT_TOKEN = getenv(
-    "GIT_TOKEN", None
-)  # Fill this variable if your upstream repository is private
+UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
+GITHUB_REPO = getenv("GITHUB_REPO", "https://github.com/code663/BRANDEDXSHIZUKA")
+GIT_TOKEN = getenv("GIT_TOKEN", None)
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ANGEL_K_WORLD")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/DIL_TO_PAGAL_HAI_01")
-
-# Set this to True if you want the assistant to automatically leave chats after an interval
-AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/roy_editx")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/the_friendz")
 
 
-# Get this credentials from https://developer.spotify.com/dashboard
-SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", "1c21247d714244ddbb09925dac565aed")
-SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "709e1a2969664491b58200860623ef19")
+AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
+AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "5400000"))
+AUTO_SUGGESTION_TIME = int(getenv("AUTO_SUGGESTION_TIME", "540000"))
+AUTO_DOWNLOADS_CLEAR = getenv("AUTO_DOWNLOADS_CLEAR", None)
+AUTO_SUGGESTION_MODE = getenv("AUTO_SUGGESTION_MODE", True)
+PRIVATE_BOT_MODE = getenv("PRIVATE_BOT_MODE", None)
+YOUTUBE_DOWNLOAD_EDIT_SLEEP = int(getenv("YOUTUBE_EDIT_SLEEP", "3"))
+TELEGRAM_DOWNLOAD_EDIT_SLEEP = int(getenv("TELEGRAM_EDIT_SLEEP", "5"))
 
+SPOTIFY_CLIENT_ID = getenv("SPOTIFY_CLIENT_ID", None)
+SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
-# Maximum limit for fetching playlist's track from youtube, spotify, apple links.
-PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 100))
+VIDEO_STREAM_LIMIT = int(getenv("VIDEO_STREAM_LIMIT", "3"))
 
+SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "30"))
 
-# Telegram audio and video file size limit (in bytes)
-TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", 104857600))
-TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
-# Checkout https://www.gbmb.org/mb-to-bytes for converting mb to bytes
+PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", "25"))
 
+CLEANMODE_DELETE_MINS = int(getenv("CLEANMODE_MINS", "5"))
 
-# Ge@STRINGSEASO_NBOT2 session from @STRINGSEASO_NBOT
+TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "104857600"))
+
+TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "1073741824"))
+# https://www.gbmb.org/mb-to-bytes
+
 STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
 STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 
-
 BANNED_USERS = filters.user()
+YTDOWNLOADER = 1
+LOG = 2
+LOG_FILE_NAME = "logs.txt"
 adminlist = {}
 lyrical = {}
-votemode = {}
+chatstats = {}
+userstats = {}
+clean = {}
 autoclean = []
-confirmer = {}
 
 
-START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg"
-)
+START_IMG_URL = getenv("START_IMG_URL", "https://te.legra.ph/file/5dbc36ec3ea5a6e04929b.jpg")
+
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/29bf663a3b91c7e0086bc.jpg"
+    "PING_IMG_URL",
+    "https://te.legra.ph/file/0c7550e2120aca5bc0e2b.jpg",
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/2abd798099b17a5a9b2fb.jpg"
-TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/590f5404cdc7840b63a1c.jpg"
-TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/590f5404cdc7840b63a1c.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg"
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/5eb646ee0bf810113af22.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/61024698bfc926e95d57a.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/61024698bfc926e95d57a.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/61024698bfc926e95d57a.jpg"
+
+PLAYLIST_IMG_URL = "https://te.legra.ph/file/6054be6dbfc0f654db62b.jpg"
+
+GLOBAL_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
+
+STATS_IMG_URL = "https://te.legra.ph/file/e906c2def5afe8a9b9120.jpg"
+
+TELEGRAM_AUDIO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+
+TELEGRAM_VIDEO_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+
+STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
+
+SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
+
+YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
+
+SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
+
+SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
+
+SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
 
 
 def time_to_seconds(time):
     stringt = str(time)
-    return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
+    return sum(
+        int(x) * 60**i
+        for i, x in enumerate(reversed(stringt.split(":")))
+    )
 
 
 DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
-
-
-if SUPPORT_CHANNEL:
-    if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
-        raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHANNEL url is wrong. Please ensure that it starts with https://"
-        )
-
-if SUPPORT_CHAT:
-    if not re.match("(?:http|https)://", SUPPORT_CHAT):
-        raise SystemExit(
-            "[ERROR] - Your SUPPORT_CHAT url is wrong. Please ensure that it starts with https://"
+SONG_DOWNLOAD_DURATION_LIMIT = int(
+    time_to_seconds(f"{SONG_DOWNLOAD_DURATION}:00")
 )
+
+
+if UPSTREAM_REPO:
+    if not re.match("(?:http|https)://", UPSTREAM_REPO):
+        print(
+            "[ERROR] - Your UPSTREAM_REPO url is wrong. Please ensure that it starts with https://"
+        )
+        sys.exit()
+
+if PING_IMG_URL:
+    if PING_IMG_URL != "assets/Ping.jpeg":
+        if not re.match("(?:http|https)://", PING_IMG_URL):
+            PING_IMG_URL = "https://te.legra.ph/file/ebf34649780915d5951fe.jpg"
+
+if START_IMG_URL:
+    if START_IMG_URL != "assets/Ping.jpeg":
+        if not re.match("(?:http|https)://", START_IMG_URL):
+            START_IMG_URL = "https://te.legra.ph/file/90e709718e7dac641aaf7.jpg"
