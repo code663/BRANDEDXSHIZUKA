@@ -13,17 +13,17 @@ def start_pannel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
+                text="↻ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ↻",
                 url=f"https://t.me/MERA_X_PYAR_BOT?startgroup=true",
             )
         ],
         [
             InlineKeyboardButton(
-                text="🦋𝐅𝐄𝐀𝐓𝐔𝐑𝐄🦋",
+                text="ғᴇᴀᴛᴜʀᴇ",
                 callback_data="settings_back_helper",
             ),
             InlineKeyboardButton(
-                text="⚙️𝐒𝐄𝐓𝐓𝐈𝐍𝐆⚙️", callback_data="settings_helper"
+                text="sᴇᴛᴛɪɴɢ", callback_data="settings_helper"
             ),
         ],
      ]
@@ -38,23 +38,23 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
     buttons = [
         [
             InlineKeyboardButton(
-                text="•─╼⃝𖠁𝐀𝙳𝙳 ◈ 𝐌𝙴 ◈ 𝐁𝙰𝙱𝚈𖠁⃝╾─•",
+                text="↻ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ ↻",
                 url=f"https://t.me/MERA_X_PYAR_BOT?startgroup=true",
             )
         
         ],
         [
             InlineKeyboardButton(
-                text="𝐌ᴏʀᴇ🥀", url=f"https://t.me/ANGEL_K_WORLD",
+                text="ᴍᴏʀᴇ", url=f"https://t.me/ANGEL_K_WORLD",
             ),
         
             InlineKeyboardButton(
-                text="𝐆𝚁𝙾𝚄𝙿✨", url=f"https://t.me/IND_PAWAN",
+                text="ɢʀᴏᴜᴘ", url=f"https://t.me/IND_PAWAN",
             ),
         ],
         [
             InlineKeyboardButton(
-                text="۞ 𝐅𝙴𝙰𝚃𝚄𝚁𝙴𝚂 ۞", callback_data="settings_back_helper"
+                text="ғᴇᴀᴛᴜʀᴇs", callback_data="settings_back_helper"
             )
         ],
      ]
